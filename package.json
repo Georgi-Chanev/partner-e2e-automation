@@ -1,0 +1,28 @@
+{
+  "name": "partner-e2e-automation",
+  "version": "1.0.0",
+  "description": "E2E automation for the Partner management workflow (Avtoikonom admin panel) using Playwright + JavaScript",
+  "type": "commonjs",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "test:ui": "playwright test --ui",
+    "test:create": "playwright test tests/partners/partner-create.spec.js",
+    "test:update": "playwright test tests/partners/partner-update.spec.js",
+    "test:lifecycle": "playwright test tests/e2e/partner-lifecycle.spec.js",
+    "report": "playwright show-report",
+    "install:browsers": "playwright install --with-deps chromium",
+    "lint": "eslint . --ext .js",
+    "format": "prettier --write ."
+  },
+  "keywords": ["e2e", "playwright", "automation", "partners"],
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@playwright/test": "^1.48.0",
+    "@faker-js/faker": "^9.0.0",
+    "dotenv": "^16.4.5",
+    "eslint": "^8.57.0",
+    "prettier": "^3.3.3"
+  }
+}
